@@ -1,0 +1,97 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.app-sidenav-container {
+    height: 100vh;
+}
+
+.app-sidenav-toolbar {
+    background: #3f51b5;
+    color: #ffffff;
+}
+
+.app-sidebar.mat-sidenav {
+    width: 15rem;
+    min-width: 15rem;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.app-user {
+    text-align: center;
+    width: 100%;
+    padding: 2rem 0 .4rem;
+    background: #3f51b5;
+    color: #ffffff;
+    margin-bottom: -7px;
+}
+
+.app-user .app-user-name {
+    display: block;
+    font-size: 0.850rem;
+    font-weight: 300;
+    margin-left: -2px;
+    font-family: Roboto,Helvetica Neue,sans-serif;
+}
+
+.app-user .app-user-name .mat-icon {
+    font-size: 16px;
+    vertical-align: -2px;
+}
+
+.app-user .app-user-photo {
+    width: 72px;
+    margin: 0 auto 8px;
+    height: 72px;
+    box-sizing: border-box;
+    border: 1px solid hsla(210,8%,51%,.13);
+    padding: 4px;
+    border-radius: 50%;
+    background-color: #ffffff ;
+    color: #3f51b5;
+}
+
+.app-user .app-user-photo .mat-icon {
+    font-size: 63px;
+    display: block;
+}
+
+.app-menu.mat-list-item {
+    color: #3f51b5;
+    border-left: solid 5px;
+    margin-bottom: 0.8px;
+    background-color: #f8f6f6;
+}
+
+.app-menu.mat-list-item:hover {
+    background-color: #ecebeb;
+}
+
+.app-text-center {
+    text-align: center;
+}
+
+.app-field {
+    width: 100%;
+}
+
+.app-table-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 300px;
+    margin: 10px;
+}
+
+.mat-table {
+    overflow: auto;
+    max-height: 500px;
+}
+
+.app-action-container {
+    margin: 10px;
+    text-align: right;
+}

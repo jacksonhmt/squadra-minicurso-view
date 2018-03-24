@@ -1,0 +1,52 @@
+<section class="content-header">
+    <h1>
+        CONTATO
+        <small>Lista de Contatos</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li class="active">Contato</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="app-action-container">
+        <button type="button" class="btn btn-primary" (click)="incluir()">
+            NOVO CONTATO
+        </button>
+    </div>
+
+    <div class="app-table-container">
+
+        <mat-table #table [dataSource]="contatos">
+            <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: columns;"></mat-row>
+
+            <ng-container matColumnDef="nome">
+                <mat-header-cell *matHeaderCellDef class="app-text-center">Nome</mat-header-cell>
+                <mat-cell *matCellDef="let contato" class="app-text-center">{{contato.nome}}</mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="apelido">
+                <mat-header-cell *matHeaderCellDef class="app-text-center">Apelido</mat-header-cell>
+                <mat-cell *matCellDef="let contato" class="app-text-center">{{contato.apelido}}</mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="telefone">
+                <mat-header-cell *matHeaderCellDef class="app-text-center">Telefone</mat-header-cell>
+                <mat-cell *matCellDef="let contato" class="app-text-center">{{contato.numero}}</mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="email">
+                <mat-header-cell *matHeaderCellDef class="app-text-center">Email</mat-header-cell>
+                <mat-cell *matCellDef="let contato" class="app-text-center">{{contato.email}}</mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="acao">
+                <mat-header-cell *matHeaderCellDef class="app-text-center">Ação</mat-header-cell>
+                <mat-cell *matCellDef="let contato" class="app-text-center">
+                    <button type="button" class="btn btn-primary fa fa-pencil text-center" (click)="alterar(contato)"></button>
+                </mat-cell>
+            </ng-container>
+        </mat-table>
+    </div>
+</section>

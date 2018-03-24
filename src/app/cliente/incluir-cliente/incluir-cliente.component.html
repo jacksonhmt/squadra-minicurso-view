@@ -1,0 +1,30 @@
+<h1 mat-dialog-title>CLIENTE <small>{{cliente.nome}}</small></h1>
+<div mat-dialog-content>
+
+    <mat-form-field class="app-field">
+        <mat-label>Nome
+            <b style="color: red;">*</b>
+        </mat-label>
+        <input maxlength="120" matInput [(ngModel)]="cliente.nome">
+    </mat-form-field>
+
+    <mat-form-field class="app-field">
+        <mat-label>E-mail
+            <b style="color: red;">*</b>
+        </mat-label>
+        <input maxlength="100" matInput [(ngModel)]="cliente.email">
+    </mat-form-field>
+
+    <mat-form-field class="app-field">
+        <mat-label>CPF</mat-label>
+        <input maxlength="11" matInput [(ngModel)]="cliente.cpf">
+    </mat-form-field>
+
+    <div class="app-action-container">
+        <p>Campos Obrigatórios <b style="color: red;">*</b></p>
+    </div>
+</div>
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="salvar(cliente)">Salvar</button>
+    <button mat-raised-button color="warn" (click)="dialog.close()">Cancelar</button>
+</mat-dialog-actions>
